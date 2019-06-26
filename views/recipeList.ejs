@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Recipe List</h1>
+    <ul>
+      <%
+        var list = '';
+        for (i = 0; i < recipeList.length; i++) {
+          list += '<li><a href="' + recipeList[i].url + '">' + recipeList[i].title + '</a></li>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
